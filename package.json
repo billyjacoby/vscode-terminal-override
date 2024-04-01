@@ -2,7 +2,7 @@
   "name": "terminal-override",
   "displayName": "terminal-override",
   "description": "Override the built in terminal with the user's choice.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -12,7 +12,9 @@
   "publisher": "billyjacoby",
   "repository": "https://github.com/billyjacoby/vscode-terminal-override",
   "license": "MIT",
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
@@ -24,16 +26,11 @@
           "default": "warp ."
         }
       }
-    },
-    "commands": [
-      {
-        "command": "terminal-override.activate",
-        "title": "Terminal Override - Activate"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
+    "vscode:publish": "vsce publish",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
