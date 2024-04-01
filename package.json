@@ -9,6 +9,9 @@
   "categories": [
     "Other"
   ],
+  "publisher": "billyjacoby",
+  "repository": "https://github.com/billyjacoby/vscode-terminal-override",
+  "license": "MIT",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
